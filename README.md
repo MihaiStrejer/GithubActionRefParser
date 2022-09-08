@@ -7,7 +7,7 @@ This is a simple git action that allows the parsing and transformation of the gi
 2) Branch commits eg: `refs/heads/develop` are parsed normally and the output of `branch_name` will be `develop` in this case
 
 ```
-- uses: MihaiStrejer/GithubActionRefParser@v0.0.1
+- uses: MihaiStrejer/GithubActionRefParser@v0.0.2
   id: ref-selector
   with:
       tags_format_regex: '(?<=[0-9]+\.)[a-zA-Z]+(?=\.*[0-9]+)'
