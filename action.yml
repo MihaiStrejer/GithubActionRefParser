@@ -1,5 +1,5 @@
 name: 'Github ref branch selector'
-description: 'Check and extract metadata from a tag or workflow_dispatch action trigger using the githubaction.ref field'. Github ref can contain various formats eg refs/tags/bv.2022-09-08.dev.01 or refs/heads/develop
+description: 'Check and extract metadata from a tag or workflow_dispatch action trigger using the githubaction.ref field. Github ref can contain various formats eg refs/tags/bv.2022-09-08.dev.01 or refs/heads/develop'
 author: 'Mihai Strejer'
 
 inputs:
