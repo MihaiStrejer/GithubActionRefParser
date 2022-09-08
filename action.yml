@@ -1,0 +1,25 @@
+name: 'Github ref branch selector'
+description: 'Check and extract metadata from a tag or workflow_dispatch action trigger using the githubaction.ref field'. Github ref can contain various formats eg refs/tags/bv.2022-09-08.dev.01 or refs/heads/develop
+author: 'Mihai Strejer'
+
+inputs:
+  tags_format_regex:
+    description: 'A tag parsing regex eg: `(?<=[0-9]+\.)[a-zA-Z]+(?=\.*[0-9]+)` will match the `dev` part of `bv.2022-09-08.dev.01`'
+    required: false
+    default: ''
+  tags_branch_map:
+    description: 'A collection of keys that will be set as the branch_name when a tag is the trigger. eg for branch develop and testing you can map develop=dev,devdeploy;testing=test'
+    required: false
+    default: ''
+
+outputs:
+  branch_name:
+    description: 'The name of the branch that was found'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'check-square'
+  color: 'blue'
